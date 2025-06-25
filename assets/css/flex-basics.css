@@ -1,0 +1,21 @@
+.flex-container {
+  /* imposto il padre come contenitore "flessibile" */
+  display: flex;
+  /* la flex-direction decide la main axis per il contenitore flessibile */
+  /* di default è già a "row */
+  flex-direction: row;
+  /* flex-wrap decide il comportamento dei figli nel caso la loro dimensione
+  superi complessivamente quella del contenitore: di default gli elementi si 
+  "comprimeranno" (nowrap) ma è anche possibile cambiare questa direttiva e
+  costringerli ad andare "a capo" (a creare nuove file, con "wrap") */
+  flex-wrap: wrap;
+}
+
+.flex-child {
+  padding: 20px;
+  background-color: bisque;
+  /* questa width è solamente indicativa quando la si applica ad un flex child;
+  nel caso di flex-wrap settato a "nowrap" potrebbe restringersi in favore di
+  comprimere tutti gli elementi in una sola riga */
+  width: 50px;
+}
