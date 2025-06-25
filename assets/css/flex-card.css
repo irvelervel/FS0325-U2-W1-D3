@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+article.card {
+  width: 300px;
+  border: 1px solid gray;
+  margin-bottom: 1em;
+  /* per omogeneizzare gli ingombri, e spingere sempre il bottone in fondo e il
+  titolo in cima, rendo questa card un contenitore flex */
+  display: flex;
+  flex-direction: column;
+}
+
+article.card > div {
+  /* div figlio diretto della card (quello con il testo) */
+  flex-grow: 1;
+  /* ora mancherebbe solo da spingere il bottone sempre in fondo... */
+  /* per farlo, rendiamo questo flex child AND un flex container! */
+  display: flex;
+  /* ripristino la verticalità della card */
+  flex-direction: column;
+}
+
+/* faccio "mangiare" lo spazio libero SEMPRE all'elemento centrale (il p) */
+/* questo comporta che il titolo starà sempre in alto, e il bottone verrà sempre
+spinto in basso senza tener conto di quanto testo ci sarà in mezzo */
+
+article.card p {
+  flex-grow: 1;
+}

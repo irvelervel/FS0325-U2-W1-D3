@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  background-color: orangered;
+  padding: 1em 0;
+  /* IMPAGINAZIONE DI DEFAULT (smartphone) */
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0 0 1em 0;
+  padding: 0;
+  text-align: center;
+  /* IMPAGINAZIONE DI DEFAULT (smartphone) */
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+
+nav form {
+  text-align: center;
+}
+
+/* STILI TABLET/DESKTOP */
+@media screen and (min-width: 576px) {
+  /* cambio la direction del contenitore flex della nav */
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    /* inserisco padding anche orizzontalmente */
+    padding: 1em;
+  }
+  /* cambio la direction del contenitore flex della ul */
+  nav ul {
+    flex-direction: row;
+    /* tolgo il margine inferiore, che spagina */
+    margin: 0;
+  }
+
+  nav li {
+    margin-right: 0.5em;
+  }
+}
