@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Footer</title>
+    <link rel="stylesheet" href="./assets/css/flex-footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <footer>
+      <section id="top">
+        <p>Questions?</p>
+        <p>
+          Write us at
+          <a href="mailto:example@example.com">example@example.com</a>
+        </p>
+        <div>
+          <i class="fab fa-facebook-square"></i> <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i> <i class="fab fa-instagram-square"></i>
+        </div>
+      </section>
+      <section id="mid">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Copyright</a></li>
+        </ul>
+      </section>
+      <section id="bottom">
+        <p><span id="year"></span>, all rights reserved.</p>
+        <p>Created with <i class="far fa-heart"></i> at EPICODE</p>
+      </section>
+    </footer>
+    <script>
+      const span = document.getElementById('year')
+      span.innerText = new Date().getFullYear()
+    </script>
+  </body>
+</html>

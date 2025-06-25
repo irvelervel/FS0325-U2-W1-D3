@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+#top {
+  background-color: #04a2b0;
+  color: white;
+  /* distribuisco lo spazio libero nel contenitore flessibile */
+  flex-grow: 3.5;
+  /* rendo top a sua volta un contenitore flex */
+  display: flex;
+  flex-direction: column;
+  /* centro x e y */
+  align-items: center;
+  justify-content: center;
+}
+
+#top p:nth-child(2) {
+  margin: 0.5em 0;
+}
+
+#top div {
+  /* contenitore delle icone */
+  font-size: 1.5em;
+}
+
+#top div i {
+  margin-right: 0.5em;
+}
+
+#mid {
+  background-color: #015d5f;
+  /* distribuisco lo spazio libero nel contenitore flessibile */
+  flex-grow: 1;
+  /* centro la lista dentro mid */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bottom {
+  background-color: #9ed3ca;
+  /* distribuisco lo spazio libero nel contenitore flessibile */
+  flex-grow: 2.5;
+  /* rendo anche bottom un display flex per poter facilmente centrare
+  il suo contenuto in orizzontale e verticale */
+  display: flex;
+  flex-direction: column;
+  /* centro sulla cross (in questo caso è la x) */
+  align-items: center;
+  /* centro sulla main (in questo caso è la y) */
+  justify-content: center;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  /* dispongo i link in orizzontale */
+  display: flex;
+  justify-content: space-around;
+  /* fornisco infine alla ul tutto lo spazio disponibile dentro mid */
+  flex-grow: 1;
+}
+
+a {
+  color: white;
+}
+
+ul a {
+  text-decoration: none;
+}
